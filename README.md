@@ -1,6 +1,6 @@
 ## Hacktoberfest Contributor
 
-Download this APK file in [here](https://drive.google.com/file/d/1SuJR4kElMu7G_Hwo21MFruLQHv6WQMkx/view?usp=sharing)
+Download this APK on [Google Play](https://play.google.com/store/apps/details?id=com.hacktoberfest2020)
 
 ---
 this repo perfect for your first pull request
