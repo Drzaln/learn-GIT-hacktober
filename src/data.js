@@ -95,7 +95,7 @@ export const DATA = [
     {
         id: 6,
         name: 'Rizky Bayu Oktavian',
-        image: require('./assets/images/rocket.jpg'),
+        image: require('./assets/images/rocket.png'),
         techStack: 'ReactJS, React Native, Android Native, Web & Mobile Design, UI / UX',
         social: [
             {
