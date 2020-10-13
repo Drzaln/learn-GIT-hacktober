@@ -79,7 +79,8 @@ export const DATA = [
                 link: 'https://github.com/sarekashi'
             }
         ]
-    },  {
+    },  
+    {
         id: 5, //increment this value
         name: 'alvin',
         image: require('./assets/images/sarekashi.jpg'),
@@ -91,5 +92,17 @@ export const DATA = [
             }
         ]
     },
+    {
+        id: 6,
+        name: 'Rizky Bayu Oktavian',
+        image: require('./assets/images/rocket.jpg'),
+        techStack: 'ReactJS, React Native, Android Native, Web & Mobile Design, UI / UX',
+        social: [
+            {
+                name: 'Github',
+                link: 'https://github.com/rbayuokt'
+            }
+        ]
+    }
 
 ]
