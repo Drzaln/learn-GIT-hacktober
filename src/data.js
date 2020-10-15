@@ -79,7 +79,7 @@ export const DATA = [
                 link: 'https://github.com/sarekashi'
             }
         ]
-    },  
+    },
     {
         id: 5, //increment this value
         name: 'alvin',
@@ -103,6 +103,29 @@ export const DATA = [
                 link: 'https://github.com/rbayuokt'
             }
         ]
-    }
-
+    },
+    {
+        id: 7, //increment this value
+        name: 'Risky Makira',
+        image: require('./assets/images/makira.jpeg'),
+        techStack: 'Javascript, Golang, Python, Docker, Kubernetes',
+        social: [
+            {
+                name: 'Github',
+                link: 'https://github.com/kirahxr'
+            },
+            {
+                name: 'LinkedIn',
+                link: 'https://www.linkedin.com/in/kirahxr'
+            },
+            {
+                name: 'Instagram',
+                link: 'https://www.instagram.com/efekrumahkost'
+            },
+            {
+                name: 'Twitter',
+                link: 'https://twitter.com/makiraid'
+            }
+        ]
+    },
 ]
