@@ -128,4 +128,28 @@ export const DATA = [
             }
         ]
     },
+    {
+        id: 8, //increment this value
+        name: 'Ammar Annajih Pasifiky',
+        image: {uri: 'https://pbs.twimg.com/profile_images/1314051784466296832/WMEMxiDo_400x400.jpg'},
+        techStack: 'Javascript, C#, Java, Docker, Node, TypeScript, React, React-Native',
+        social: [
+            {
+                name: 'Github',
+                link: 'https://github.com/tejojr'
+            },
+            {
+                name: 'LinkedIn',
+                link: 'https://www.linkedin.com/in/zeref-weismann/'
+            },
+            {
+                name: 'Instagram',
+                link: 'https://www.instagram.com/zeref.weismann/'
+            },
+            {
+                name: 'Twitter',
+                link: 'https://twitter.com/AmmarFiky'
+            }
+        ]
+    },
 ]
