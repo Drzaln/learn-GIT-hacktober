@@ -26,6 +26,19 @@ const Detail = ({ route, navigation }) => {
 	const bottomView = useRef()
 	const topRef = useRef()
 	let connectButton = null
+	let stackItem = null
+	let arrStack = data.techStack.split(',')
+
+	const backAction = () => {
+		Promise.all([ topRef.current.fadeOut(450), bottomView.current.fadeOutDownBig(450) ]).then(() =>
+			navigation.goBack()
+		)
+		return true
+	}
+
+	const removeWhiteSpace = (text) => {
+		return text.replace(/^[ ]+/g, "")
+	}
 
 	connectButton = data.social.map((item, index) => (
 		<React.Fragment key={index}>
@@ -40,12 +53,11 @@ const Detail = ({ route, navigation }) => {
 		</React.Fragment>
 	))
 
-	const backAction = () => {
-		Promise.all([ topRef.current.fadeOut(450), bottomView.current.fadeOutDownBig(450) ]).then(() =>
-			navigation.goBack()
-		)
-		return true
-	}
+	stackItem = arrStack.map((item, index) => (
+		<View key={index} style={styles.techContainer(isDark)}>
+			<Text style={styles.techText(isDark)}>{removeWhiteSpace(item)}</Text>
+		</View>
+	))
 
 	useEffect(() => {
 		BackHandler.addEventListener('hardwareBackPress', backAction)
@@ -100,9 +112,7 @@ const Detail = ({ route, navigation }) => {
 					style={styles.bottomView(width, isDark)}>
 					<Text style={styles.name(isDark)}>{data.name}</Text>
 					<View style={styles.container}>
-						<View style={styles.techContainer(isDark)}>
-							<Text style={styles.techText(isDark)}>{data.techStack}</Text>
-						</View>
+						{stackItem}
 					</View>
 					<View style={styles.connectContainer}>
 						<Text style={styles.connectText(isDark)}>Let's Connect</Text>
@@ -144,14 +154,16 @@ const styles = StyleSheet.create({
 		backgroundColor: isDark ? colors.background_dark : colors.background_light,
 		flex: 1
 	}),
-	container: { alignItems: 'flex-start', marginTop: 14 },
+	container: { alignItems: 'center', marginTop: 10, flexDirection: 'row', flex: 1, flexWrap: 'wrap' },
 	techContainer: (isDark) => ({
 		backgroundColor: isDark ? colors.foreground_dark : colors.foreground_light,
 		paddingHorizontal: 16,
 		paddingVertical: 4,
 		alignItems: 'center',
 		justifyContent: 'center',
-		borderRadius: 100
+		borderRadius: 100,
+		marginRight: 12,
+		marginVertical: 6
 	}),
 	techText: (isDark) => ({ color: isDark ? colors.foreground_light : colors.foreground_dark }),
 	name: (isDark) => ({
@@ -160,7 +172,7 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold',
 		lineHeight: 28
 	}),
-	connectContainer: { flexDirection: 'row', alignItems: 'center', marginTop: 32, marginBottom: 6 },
+	connectContainer: { flexDirection: 'row', alignItems: 'center', marginTop: 26, marginBottom: 6 },
 	connectText: (isDark) => ({ color: isDark ? '#90c3da' : '#5a6a86', fontSize: 14 }),
 	lineHorizontal: (isDark) => ({
 		height: 1,
