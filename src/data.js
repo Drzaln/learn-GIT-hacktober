@@ -48,10 +48,10 @@ export const DATA = [
             },
         ]
     },
-     {
+    {
         id: 3, //increment this value
         name: 'Rohit W',
-        image: {uri: 'https://i.ytimg.com/vi/p759fOyk2cw/maxresdefault.jpg'},
+        image: { uri: 'https://i.ytimg.com/vi/p759fOyk2cw/maxresdefault.jpg' },
         techStack: 'MongoDb, Angular, Nodejs, Express',
         social: [
             {
@@ -131,7 +131,7 @@ export const DATA = [
     {
         id: 8, //increment this value
         name: 'Ammar Annajih Pasifiky',
-        image: {uri: 'https://pbs.twimg.com/profile_images/1314051784466296832/WMEMxiDo_400x400.jpg'},
+        image: { uri: 'https://pbs.twimg.com/profile_images/1314051784466296832/WMEMxiDo_400x400.jpg' },
         techStack: 'Javascript, C#, Java, Docker, Node, TypeScript, React, React-Native',
         social: [
             {
@@ -149,6 +149,30 @@ export const DATA = [
             {
                 name: 'Twitter',
                 link: 'https://twitter.com/AmmarFiky'
+            }
+        ]
+    },
+    {
+        id: 9, //increment this value
+        name: 'Naufaldi Rafif',
+        image: require('./assets/images/cartoon-faldi.jpeg'),
+        techStack: 'Javascript, ReactJS, SaSS, NextJS',
+        social: [
+            {
+                name: 'Github',
+                link: 'https://github.com/naufaldi'
+            },
+            {
+                name: 'LinkedIn',
+                link: 'https://www.linkedin.com/in/naufaldirafif/'
+            },
+            {
+                name: 'Instagram',
+                link: 'https://www.instagram.com/rafifsatriya/'
+            },
+            {
+                name: 'Twitter',
+                link: 'https://twitter.com/F2aldi'
             }
         ]
     },
